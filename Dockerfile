@@ -28,10 +28,10 @@ RUN apt install -y nginx \
     php7.0-xml \
     php7.0-zip \
     php7.0-bcmath
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY app.json /app.json
-COPY index.php /var/www/public/index.php
-COPY start.sh /start.sh
+COPY files/nginx.conf /etc/nginx/conf.d/default.conf
+COPY files/app.json /app.json
+COPY files/index.php /var/www/public/index.php
+COPY files/start.sh /start.sh
 RUN chmod a+x /start.sh
 
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
