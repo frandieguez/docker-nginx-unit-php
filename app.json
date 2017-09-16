@@ -1,0 +1,17 @@
+{
+    "listeners": {
+        "*:8300": {
+            "application": "saas"
+        }
+    },
+    "applications": {
+        "saas": {
+            "type": "php",
+            "workers": 20,
+            "user": "www-data",
+            "group": "www-data",
+            "root": "/var/www/public",
+            "index": "index.php"
+        }
+    }
+}
